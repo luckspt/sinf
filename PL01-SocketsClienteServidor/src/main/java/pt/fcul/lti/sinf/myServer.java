@@ -95,7 +95,6 @@ public class myServer {
                 byte[] buffer = new byte[size];
 
                 // Read fileSize bytes from the client
-                // TODO: fix this
                 do {
                     int bytesRead = inStream.read(buffer, 0, size);
 
@@ -106,16 +105,6 @@ public class myServer {
                         break;
                     }
                 } while (fileSize < file.length());
-
-                /* do {
-                    int bytesToRead = (int) inStream.readObject();
-                    if (bytesToRead == 0) {
-                        break;
-                    }
-
-                    byte[] buffer = (byte[]) inStream.readObject();
-                    fileOutputStream.write(buffer);
-                } while (true);*/
                 // ******************************************************************
 
                 outStream.close();
